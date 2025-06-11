@@ -1,0 +1,54 @@
+* {
+    transition: all 1s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.loader {
+    border-top-color: #3498db;
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade-enter {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+.fade-enter-active {
+    opacity: 1;
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.1s ease, transform 0.4s ease; /* Add transition */
+}
+
+[x-cloak] {
+    display: none;
+}
+
+.start-animation {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    100% { opacity: 1; }
+}
