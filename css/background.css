@@ -1,0 +1,89 @@
+/* Background Container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Dot Box Containers */
+.dot-box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.dot-box2 {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.dot-box3 {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dotted Pattern Background */
+.dot-box::before, 
+.dot-box2::before, 
+.dot-box3::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(40, 196, 196, 0.35) 3px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* Animation Classes */
+.bgspin {
+    animation: spinner 11.5s linear infinite;
+}
+
+.bgfloat {
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+    75% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes spinner {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
