@@ -10,13 +10,6 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="bg-gray-900">
-    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center text-white transition-opacity duration-1000 ease-in-out bg-gray-800">
-        <div class="relative flex items-center justify-center w-64 h-64 mb-4">
-            <div class="absolute w-full h-full border-[20px] border-t-[20px] rounded-full border-b-teal-500 border-t-green-800 animate-spin"></div>
-            <img src="img/loading-scream.png" alt="KevsWeb Logo" class="w-40 h-40">
-        </div>
-        <p id="random-text" class="mt-2 text-lg text-gray-300"></p>
-    </div>
     <div id="background-container"></div>
     
     <main class="relative z-10">
@@ -29,79 +22,13 @@
         </div>
         <div class="flex items-center justify-center min-h-screen main-content-section">
             <div class="text-center text-white p-8 bg-black animate-up bg-opacity-50 rounded-lg">
-                <h1 class="text-4xl font-bold mb-4">Portfolio Tests</h1>
+                <h1 class="text-4xl font-bold mb-4">Portfolio Tests -2</h1>
                 <p class="text-xl">Background animations should be visible behind this content</p>
                 <p class="text-sm mt-4 opacity-70">Check for rotating dot patterns and floating geometric shapes</p>
             </div>
         </div>
     </main>
 
-    <script>
-        // Load background component
-        fetch('components/background.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('background-container').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading background:', error);
-                // Fallback: show error message
-                document.getElementById('background-container').innerHTML = 
-                    '<div class="fixed inset-0 bg-red-900 opacity-20 flex items-center justify-center"><p class="text-white">Background failed to load</p></div>';
-            });
-
-        window.addEventListener('load', function () {
-            const loadingScreen = document.getElementById('loading-screen');
-    
-            setTimeout(function () {
-                loadingScreen.classList.add('fade-out');
-    
-                setTimeout(function () {
-                    loadingScreen.style.display = 'none';
-                    setupIntersectionObserver();
-                }, 1000);
-            }, 5000);
-    
-            function setupIntersectionObserver() {
-                const observerOptions = {
-                    root: null,
-                    threshold: 0.1
-                };
-    
-                const observerCallback = function(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('fade-in');
-                            entry.target.querySelectorAll('.animate-up').forEach(text => {
-                                text.classList.add('start-animation');
-                            });
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                };
-    
-                const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
-                document.querySelectorAll('.main-content-section').forEach(section => {
-                    observer.observe(section);
-                });
-            }
-        });
-
-        const randomTexts = [
-            "Preparing something awesome...",
-            "Hang tight! It's almost ready...",
-            "Building the magic for you...",
-            "Just a moment, getting things ready...",
-            "Almost there, hold on tight!",
-            "Planning, Designing, Coding, DEVELOPING!",
-            "Generating Design and Function to run..."
-        ];
-
-        window.addEventListener('load', () => {
-            const randomText = randomTexts[Math.floor(Math.random() * randomTexts.length)];
-            document.getElementById('random-text').textContent = randomText;
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

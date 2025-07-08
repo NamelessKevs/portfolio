@@ -1,0 +1,129 @@
+// Loading Screen Configuration
+const loadingPairs = [
+    { text: "Preparing something awesome...", image: "img/loading-scream.png" },
+    { text: "Hang tight! It's almost ready...", image: "img/loading-scream.png" },
+    { text: "Building the magic for you...", image: "img/loading-scream.png" },
+    { text: "Just a moment, getting things ready...", image: "img/loading-scream.png" },
+    { text: "Almost there, hold on tight!", image: "img/loading-scream.png" },
+    { text: "Planning, Designing, Coding, DEVELOPING!", image: "img/loading-scream.png" },
+    { text: "Generating Design and Function to run...", image: "img/loading-scream.png" }
+];
+
+// Load loading component
+function loadLoadingComponent() {
+    fetch('components/loading.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('afterbegin', html);
+            initializeLoadingScreen();
+        })
+        .catch(error => {
+            console.error('Error loading loading component:', error);
+            // Fallback loading screen
+            document.body.insertAdjacentHTML('afterbegin', 
+                '<div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center text-white bg-gray-800"><p>Loading...</p></div>'
+            );
+            initializeLoadingScreen();
+        });
+}
+
+// Initialize loading screen functionality
+function initializeLoadingScreen() {
+    // Disable scrolling during loading
+    document.body.style.overflow = 'hidden';
+    
+    // Select random loading pair
+    const randomPair = loadingPairs[Math.floor(Math.random() * loadingPairs.length)];
+    
+    // Set random text and image
+    const loadingText = document.getElementById('loading-text');
+    const loadingImage = document.getElementById('loading-image');
+    
+    if (loadingText) loadingText.textContent = randomPair.text;
+    if (loadingImage) {
+        loadingImage.src = randomPair.image;
+        loadingImage.alt = randomPair.text;
+    }
+    
+    // Start loading screen timer
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        setTimeout(() => {
+            loadingScreen.classList.add('fade-out');
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                // Re-enable scrolling after loading is complete
+                document.body.style.overflow = 'auto';
+                setupIntersectionObserver();
+            }, 1000);
+        }, 5000);
+    }
+}
+
+// Load background component
+function loadBackgroundComponent() {
+    fetch('components/background.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('background-container').innerHTML = html;
+            // Initialize Alpine.js for the new DOM elements
+            if (window.Alpine) {
+                Alpine.initTree(document.getElementById('background-container'));
+            }
+        })
+        .catch(error => {
+            console.error('Error loading background:', error);
+            document.getElementById('background-container').innerHTML = 
+                '<div class="fixed inset-0 bg-red-900 opacity-20 flex items-center justify-center"><p class="text-white">Background failed to load</p></div>';
+        });
+}
+
+// Intersection Observer for scroll animations
+function setupIntersectionObserver() {
+    const observerOptions = {
+        root: null,
+        threshold: 0.1
+    };
+
+    const observerCallback = function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                entry.target.querySelectorAll('.animate-up').forEach(text => {
+                    text.classList.add('start-animation');
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    document.querySelectorAll('.main-content-section').forEach(section => {
+        observer.observe(section);
+    });
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Force scroll to top - multiple approaches to ensure it works
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    loadLoadingComponent();
+    loadBackgroundComponent();
+});
+
+// Additional scroll to top on window load (after everything is loaded)
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+});
+
+// Disable scroll restoration (browser remembering scroll position)
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
