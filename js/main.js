@@ -57,7 +57,7 @@ function initializeLoadingScreen() {
                 document.body.style.overflow = 'auto';
                 setupIntersectionObserver();
             }, 1000);
-        }, 5000);
+        }, 100);
     }
 }
 

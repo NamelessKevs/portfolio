@@ -1,5 +1,6 @@
 * {
     transition: all 1s ease-in-out;
+    font-family: 'Comic Neue', cursive;
 }
 
 html {
@@ -51,4 +52,38 @@ html {
 
 @keyframes fadeIn {
     100% { opacity: 1; }
+}
+
+.rgb:hover {
+  background: linear-gradient(270deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4 , #f5df3b, #a20492);
+  background-size: 1200% 1200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientAnimation 2s ease infinite;
+}
+
+.rgb-bg:hover {
+  background: linear-gradient(270deg, #4bc560, #c9c758, #bc56ad, #3287af);
+  background-size: 1200% 1200%;
+  animation: gradientAnimation 4s ease infinite;
+}
+
+.rgb-bg2:hover {
+  background: linear-gradient(270deg, #069448, #c13737, #f4b73d, #1b85b2);
+  background-size: 1200% 1200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
