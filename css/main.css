@@ -87,3 +87,15 @@ html {
     background-position: 0% 50%;
   }
 }
+
+.waving-video {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.waving-video:hover {
+    transform: scale(1.05);
+}

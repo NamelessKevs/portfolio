@@ -105,6 +105,26 @@ function setupIntersectionObserver() {
     });
 }
 
+function setupVideoInteraction() {
+    const clickableName = document.getElementById('clickable-name');
+    const video = document.getElementById('waving-video');
+    
+    if (clickableName && video) {
+        clickableName.addEventListener('click', function() {
+            // Reset to beginning and play
+            video.currentTime = 0;
+            video.play();
+        });
+        
+        // When video ends, it automatically pauses on the last frame
+        // Or you can make it pause on first frame:
+        video.addEventListener('ended', function() {
+            video.currentTime = 0; // Go back to first frame
+            video.pause();
+        });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Force scroll to top - multiple approaches to ensure it works
@@ -114,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     loadLoadingComponent();
     loadBackgroundComponent();
+    setupVideoInteraction();
 });
 
 // Additional scroll to top on window load (after everything is loaded)

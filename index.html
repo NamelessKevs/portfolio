@@ -14,10 +14,24 @@
     <div id="background-container"></div>
     
     <main class="relative z-10 px-20">
-        <div class="flex items-center min-h-screen main-content-section">
+        <div class="flex justify-between items-center min-h-screen main-content-section">
             <div class="animate-up text-white">
-                <h1 class="text-7xl hover:scale-105 overflow-visible hover:cursor-pointer ease-in-out duration-100 font-bold rgb font-bold mb-4">Talisic, <a class="text-teal-500">Kevin Rey</a> S.</h1>
-                <p class="text-xl">A Filipino front-end developer with back-end capabilities.</p>
+                <!-- <h1 class="text-7xl hover:scale-105 overflow-visible hover:cursor-pointer ease-in-out duration-100 font-bold rgb font-bold mb-4">Talisic, <a class="text-teal-500">Kevin Rey</a> S.</h1> -->
+                <h1 id="clickable-name" class="text-7xl hover:scale-105 overflow-visible hover:cursor-pointer ease-in-out duration-100 font-bold rgb font-bold mb-4">
+                    Talisic, <span class="text-teal-500">Kevin Rey</span> S.
+                </h1>
+                <p class="text-2xl">A Filipino front-end developer with back-end capabilities.</p>
+            </div>
+            <div class="animate-up text-white">
+                <video 
+                    id="waving-video" 
+                    class="waving-video" 
+                    muted 
+                    preload="auto"
+                >
+                    <source src="img/waving.mp4" type="video/mp4">
+                    <img src="img/loading-scream.png" alt="Kevin Rey Talisic" class="waving-video">
+                </video>
             </div>
         </div>
         <div class="flex items-center justify-center min-h-screen main-content-section">
