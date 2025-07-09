@@ -3,7 +3,7 @@ const loadingPairs = [
     { text: "Preparing something awesome...", image: "img/loading-scream.png" },
     { text: "Hang tight! It's almost ready...", image: "img/loading-scream.png" },
     { text: "Building the magic for you...", image: "img/galaxy.png" },
-    { text: "Just a moment, getting things ready...", image: "img/loading-scream.png" },
+    { text: "Just a moment, getting things ready...", image: "img/animate.gif" },
     { text: "Almost there, hold on tight!", image: "img/loading-scream.png" },
     { text: "Planning, Designing, Coding, DEVELOPING!", image: "img/loading-scream.png" },
     { text: "Generating Design and Function to run...", image: "img/loading-scream.png" }
