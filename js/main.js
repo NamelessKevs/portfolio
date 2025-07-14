@@ -90,7 +90,7 @@ function setupIntersectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
-                entry.target.querySelectorAll('.animate-up, .animate-down, .animate-left, .animate-right, .animate-right-b').forEach(text => {
+                entry.target.querySelectorAll('.animate-up, .animate-down, .animate-left, .animate-right, .animate-right-b, .animate-right-c').forEach(text => {
                     text.classList.add('start-animation');
                 });
                 observer.unobserve(entry.target);
