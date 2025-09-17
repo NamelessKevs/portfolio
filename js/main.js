@@ -6,6 +6,7 @@ const loadingPairs = [
     { text: "Just a moment, getting things ready...", image: "img/animate.gif" },
     { text: "Almost there, hold on tight!", image: "img/loading-scream.png" },
     { text: "Planning, Designing, Coding, DEVELOPING!", image: "img/loading-scream.png" },
+    { text: "reCycling the code, Hang on", image: "img/loading-scream.png" },
     { text: "Generating Design and Function to run...", image: "img/loading-scream.png" }
 ];
 
@@ -79,7 +80,7 @@ function loadBackgroundComponent() {
         });
 }
 
-// Intersection Observer for scroll animations
+// Intersection Observer for scroll animations AND video autoplay
 function setupIntersectionObserver() {
     const observerOptions = {
         root: null,
@@ -90,9 +91,21 @@ function setupIntersectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
-                entry.target.querySelectorAll('.animate-up, .animate-down, .animate-left, .animate-right, .animate-right-b, .animate-right-c').forEach(text => {
+                entry.target.querySelectorAll('.animate-up, .animate-down, .animate-popin, .animate-left, .animate-left-b, .animate-right, .animate-right-b, .animate-right-c').forEach(text => {
                     text.classList.add('start-animation');
                 });
+                
+                // Check if this section contains the waving video
+                const wavingVideo = entry.target.querySelector('#waving-video');
+                if (wavingVideo && !wavingVideo.hasAttribute('data-played')) {
+                    // Mark as played so it only autoplays once
+                    wavingVideo.setAttribute('data-played', 'true');
+                    wavingVideo.currentTime = 0;
+                    wavingVideo.play().catch(error => {
+                        console.log('Video autoplay failed:', error);
+                    });
+                }
+                
                 observer.unobserve(entry.target);
             }
         });
@@ -111,15 +124,14 @@ function setupVideoInteraction() {
     
     if (clickableName && video) {
         clickableName.addEventListener('click', function() {
-            // Reset to beginning and play
+            // Reset to beginning and play (manual trigger)
             video.currentTime = 0;
             video.play();
         });
         
-        // When video ends, it automatically pauses on the last frame
-        // Or you can make it pause on first frame:
+        // When video ends, pause on first frame
         video.addEventListener('ended', function() {
-            video.currentTime = 0; // Go back to first frame
+            video.currentTime = 0;
             video.pause();
         });
     }

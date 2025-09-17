@@ -14,19 +14,67 @@
     <div id="background-container"></div>
     
     <main class="relative z-10">
-        <div class="flex mx-20 justify-between items-center min-h-screen main-content-section">
+        <div class="flex flex-col lg:flex-row mx-20 justify-between items-center min-h-screen main-content-section">
             <div class="text-white">
-                <h1 class="text-2xl animate-left">Hi<span class="text-teal-500">,</span> My <span class="text-teal-500">name</span> is</h1>
-                <h1 id="clickable-name" class="text-7xl animate-right hover:scale-105 hover:cursor-pointer ease-in-out duration-100 font-bold rgb font-bold mb-4">
-                    Talisic, <span class="text-teal-500">Kevin Rey</span> S.
+                <h1 class="text-2xl animate-left-b">Hi<span class="text-teal-500">,</span> My <span class="text-teal-500">name</span> is</h1>
+                <div id="clickable-name" class="animate-left-b">
+                <h1 class="text-4xl xl:text-7xl group items-end font-bold mb-4 inline-flex transition-all duration-200 ease-out active:scale-95 cursor-pointer">
+                    Talisic, 
+                    <span class="text-teal-500">Kevin Rey&nbsp;</span> S.
+                    <div class="flex transition-all duration-300 ease-out
+                                translate-x-0 opacity-0
+                                group-hover:translate-x-4 group-hover:opacity-100">
+                        <!-- Triangle pointer -->
+                        <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                        <!-- Speech bubble -->
+                        <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap">
+                            Click me
+                        </span>
+                    </div>
                 </h1>
-                <p class="text-2xl animate-up">A Filipino Web Developer/UI Designer/Digital Artist.</p>
+                </div>
+                <p class="text-2xl animate-left-b">A Filipino Web Developer/UI Designer/Digital Artist.</p>
+                <div class="relative top-10 flex w-max flex-col gap-2">
+                    <div class="inline-flex w-max h-10 items-center">
+                        <a href="https://x.com/PhKito" class="w-max peer">
+                        <img src="img/x-logo.png"  
+                            class="p-1 animate-left-b rounded-full bg-teal-500 w-8 h-8">
+                        </a>
+                        <span class="flex transition-all duration-300 ease-out
+                                    translate-x-0 opacity-0 pointer-events-none
+                                    peer-hover:translate-x-4 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap text-white">
+                                @PhKito
+                            </span>
+                        </span>
+                    </div>
+                    <div class="inline-flex w-max h-10 items-center">
+                        <a href="https://x.com/PhKito" class="w-max peer">
+                        <img src="img/gmail.png"  
+                            class="p-1 animate-left-b rounded-full bg-teal-500 w-8 h-8">
+                        </a>
+                        <span class="flex transition-all duration-300 ease-out
+                                    translate-x-0 opacity-0 pointer-events-none
+                                    peer-hover:translate-x-4 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap text-white">
+                                kevstalisic@gmail.com
+                            </span>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="animate-right text-white">
+            <div class="animate-popin text-white">
                 <video 
                     id="waving-video" 
-                    class="waving-video" 
-                    muted 
+                    class="waving-video xl:w-80 w-60 h-60 lg:w-72 lg:h-72 xl:h-80" 
+                    muted
+                    playsinline
                     preload="auto"
                 >
                     <source src="img/waving.mp4" type="video/mp4">
@@ -34,7 +82,7 @@
                 </video>
             </div>
         </div>
-        <div class="bg-white/85 px-20">
+        <div class="bg-white/75 px-20">
              <div class="flex items-center min-h-screen">
                 <div class="main-content-section">
                     <div class="flex w-max hover:scale-110 hover:cursor-pointer ease-in-out duration-100">
@@ -42,8 +90,17 @@
                     <h1 class="text-4xl text-teal-800 text-center animate-right-b">Me</h1>
                     </div>
                     <p class="w-[45vw] mt-5 animate-right-c text-xl text-justify">
-                        Hi, You can call me Kevs, a Front-end Developer with back-end capabilities, bringing 1 year of experience building web systems from small-scale businesses to manufacturing companies. As a Computer Science graduate with a passion for giving best user experiences, I focus on creating engaging user interfaces and responsive design using tech stack like Vue.js, Inertia.js and Laravel. I enjoy collaborating with teams to deliver efficient solutions and exploring creative projects including game development and digital art.
+                        Hi, You can call me Kevs, a Web Developer with 1 year of experience building web systems. I specialize in Laravel, Vue.js, React, and front-end development, with a creative background in digital art and animation. I enjoy collaborating with teams to deliver efficient solutions while exploring creative projects.
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="px-20">
+             <div class="flex items-center min-h-screen">
+                <div class="main-content-section">
+                    <div class="w-max hover:scale-110 hover:cursor-pointer ease-in-out duration-100">
+                    <h1 class="text-4xl text-teal-500 text-center animate-right">Projects&nbsp;</h1>
+                    </div>
                 </div>
             </div>
         </div>

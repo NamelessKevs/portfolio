@@ -43,10 +43,21 @@ html {
     transition: opacity 0.1s ease, transform 0.4s ease; /* Add transition */
 }
 
+.animate-left-b {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.9s ease 1s, transform 1.2s ease 1s;
+}
+
 .animate-right {
     opacity: 0;
     transform: translateX(-200px); /* Start slightly below */
     transition: opacity 0.1s ease, transform 0.4s ease; /* Add transition */
+}
+
+.animate-popin {
+    opacity: 0;
+    transition: opacity 0.1s ease;
 }
 
 .animate-right-b {
@@ -119,8 +130,6 @@ html {
 }
 
 .waving-video {
-    width: 300px;
-    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     transition: transform 0.2s ease-in-out;
