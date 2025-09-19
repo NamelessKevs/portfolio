@@ -6,6 +6,7 @@
     <title>Kevin Rey - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="icon" href="/img/titlepic.png" type="image/png">
     <link rel="stylesheet" href="css/background.css">
     <!-- <link href="https://fonts.google.com/specimen/Comic+Neue" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
@@ -14,65 +15,122 @@
     <div id="background-container"></div>
     
     <main class="relative z-10">
-        <div class="flex flex-col lg:flex-row mx-20 justify-between items-center min-h-screen main-content-section">
-            <div class="text-white">
-                <h1 class="text-2xl animate-left-b">Hi<span class="text-teal-500">,</span> My <span class="text-teal-500">name</span> is</h1>
-                <div id="clickable-name" class="animate-left-b">
-                <h1 class="text-4xl xl:text-7xl group items-end font-bold mb-4 inline-flex transition-all duration-200 ease-out active:scale-95 cursor-pointer">
-                    Talisic, 
-                    <span class="text-teal-500">Kevin Rey&nbsp;</span> S.
-                    <div class="flex transition-all duration-300 ease-out
-                                translate-x-0 opacity-0
-                                group-hover:translate-x-4 group-hover:opacity-100">
-                        <!-- Triangle pointer -->
-                        <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
-                        <!-- Speech bubble -->
-                        <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap">
-                            Click me
-                        </span>
-                    </div>
-                </h1>
-                </div>
-                <p class="text-2xl animate-left-b">A Filipino Web Developer/UI Designer/Digital Artist.</p>
-                <div class="relative top-10 flex w-max flex-col gap-2">
-                    <div class="inline-flex w-max h-10 items-center">
-                        <a href="https://x.com/PhKito" class="w-max peer">
-                        <img src="img/x-logo.png"  
-                            class="p-1 animate-left-b rounded-full bg-teal-500 w-8 h-8">
-                        </a>
-                        <span class="flex transition-all duration-300 ease-out
-                                    translate-x-0 opacity-0 pointer-events-none
-                                    peer-hover:translate-x-4 peer-hover:opacity-100">
+        <!-- Home section -->
+        <div class="flex flex-col lg:flex-row mx-20 justify-center lg:justify-between items-center min-h-screen main-content-section">
+            <div class="text-white order-[2] lg:order-[1] items-center lg:items-start flex flex-col">
+                <h1 class="text-xs order-[2] lg:order-[1] lg:text-base xl:text-2xl animate-left-b">Hi<span class="text-teal-500">,</span> My <span class="text-teal-500">name</span> is</h1>
+                <div id="clickable-name" class="animate-left-b order-[3] lg:order-[2]">
+                    <h1 class="text-xl lg:text-4xl xl:text-7xl group items-end font-bold mb-0 lg:mb-2 xl:mb-4 inline-flex transition-all duration-200 ease-out active:scale-95 cursor-pointer">
+                        Talisic, 
+                        <span class="text-teal-500">Kevin Rey&nbsp;</span> S.
+                        <div class="flex transition-all duration-300 ease-out
+                                    translate-x-0 opacity-0
+                                    group-hover:translate-x-4 group-hover:opacity-100">
                             <!-- Triangle pointer -->
                             <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
                             <!-- Speech bubble -->
-                            <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap text-white">
+                            <span class="text-[10px] xl:text-sm bg-teal-500 xl:px-2 px-1 py-0 xl:py-1 rounded-lg whitespace-nowrap">
+                                Click me
+                            </span>
+                        </div>
+                    </h1>
+                </div>
+                <p class="text-xs order-[4] lg:order-[3] lg:text-base xl:text-2xl animate-left-b">A Filipino Web Developer/UI Designer/Digital Artist.</p>
+                <div class="flex flex-row order-[5] lg:order-[4] lg:mt-3 mt-0 xl:mt-5 h-6 xl:h-10 animate-left-b gap-1 xl:gap-2">
+                    <div class="w-12 lg:w-24 xl:w-28">
+                        <button class="p-1 xl:p-2 bg-teal-500 text-[6px] lg:text-xs xl:text-base w-max h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out hover:bg-white hover:text-teal-500 border-l-2 xl:border-l-4 rounded-md border-teal-800 text-white">Download CV</button>
+                    </div>
+                    <div>
+                        <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-gray-600 text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out hover:bg-white hover:text-gray-500 border-l-2 xl:border-l-4 rounded-md border-gray-400 text-white">Download Resume</button>
+                    </div>
+                </div>
+                <div class="flex flex-row w-full justify-center lg:justify-start order-[1] lg:order-[5] gap-1 mt-4 mb-4 lg:mb-0 lg:mt-8 xl:mt-12 flex-row">
+                    <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
+                        <a href="https://x.com/PhKito" target="_blank" class="w-max peer">
+                        <img src="img/x-logo.png"  
+                            class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
+                        </a>
+                        <span class="relative w-0 flex transition-all duration-300 ease-out
+                                    translate-y-0 -translate-x-3 opacity-0 pointer-events-none
+                                    xl:peer-hover:-translate-y-10 lg:peer-hover:-translate-y-7 peer-hover:translate-y-6 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 relative left-1 -top-1 lg:top-4 xl:top-6 rotate-45 lg:-rotate-45 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-[8px] lg:text-[10px] xl:text-sm bg-teal-500 lg:px-2 px-1 py-0 lg:py-1 rounded-lg whitespace-nowrap text-white">
                                 @PhKito
                             </span>
                         </span>
                     </div>
-                    <div class="inline-flex w-max h-10 items-center">
-                        <a href="https://x.com/PhKito" class="w-max peer">
+                    <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
+                        <a href="mailto:kevstalisic@gmail.com?subject=Hiring Inquiry&body=Good day! Kevs, I would like to hire you" class="w-max peer">
                         <img src="img/gmail.png"  
-                            class="p-1 animate-left-b rounded-full bg-teal-500 w-8 h-8">
+                            class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
-                        <span class="flex transition-all duration-300 ease-out
-                                    translate-x-0 opacity-0 pointer-events-none
-                                    peer-hover:translate-x-4 peer-hover:opacity-100">
+                        <span class="relative w-0 flex transition-all duration-300 ease-out
+                                    translate-y-0 -translate-x-3 opacity-0 pointer-events-none
+                                    xl:peer-hover:-translate-y-10 lg:peer-hover:-translate-y-7 peer-hover:translate-y-6 peer-hover:opacity-100">
                             <!-- Triangle pointer -->
-                            <div class="w-0 h-0 mt-2 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <div class="w-0 h-0 relative left-1 -top-1 lg:top-4 xl:top-6 rotate-45 lg:-rotate-45 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
                             <!-- Speech bubble -->
-                            <span class="text-sm bg-teal-500 px-2 py-1 rounded-lg whitespace-nowrap text-white">
-                                kevstalisic@gmail.com
+                            <span class="text-[8px] lg:text-[10px] xl:text-sm bg-teal-500 lg:px-2 px-1 py-0 lg:py-1 rounded-lg whitespace-nowrap text-white">
+                               kevstalisic@gmail.com
+                            </span>
+                        </span>
+                    </div>
+                    <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
+                        <a href="https://github.com/NamelessKevs" target="_blank" class="w-max peer">
+                        <img src="img/github.png"  
+                            class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
+                        </a>
+                        <span class="relative w-0 flex transition-all duration-300 ease-out
+                                    translate-y-0 -translate-x-3 opacity-0 pointer-events-none
+                                    xl:peer-hover:-translate-y-10 lg:peer-hover:-translate-y-7 peer-hover:translate-y-6 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 relative left-1 -top-1 lg:top-4 xl:top-6 rotate-45 lg:-rotate-45 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-[8px] lg:text-[10px] xl:text-sm bg-teal-500 lg:px-2 px-1 py-0 lg:py-1 rounded-lg whitespace-nowrap text-white">
+                                NamelessKevs
+                            </span>
+                        </span>
+                    </div>
+                    <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
+                        <a href="https://www.facebook.com/kevs.talisic" target="_blank" class="w-max peer">
+                        <img src="img/fb.png"  
+                            class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
+                        </a>
+                        <span class="relative w-0 flex transition-all duration-300 ease-out
+                                    translate-y-0 -translate-x-3 opacity-0 pointer-events-none
+                                    xl:peer-hover:-translate-y-10 lg:peer-hover:-translate-y-7 peer-hover:translate-y-6 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 relative left-1 -top-1 lg:top-4 xl:top-6 rotate-45 lg:-rotate-45 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-[8px] lg:text-[10px] xl:text-sm bg-teal-500 lg:px-2 px-1 py-0 lg:py-1 rounded-lg whitespace-nowrap text-white">
+                                Kevs Talisic
+                            </span>
+                        </span>
+                    </div>
+                    <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
+                        <a href="https://www.linkedin.com/in/kevstalisic/" target="_blank" class="w-max peer">
+                        <img src="img/linkedin.png"  
+                            class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
+                        </a>
+                        <span class="relative w-0 flex transition-all duration-300 ease-out
+                                    translate-y-0 -translate-x-3 opacity-0 pointer-events-none
+                                    xl:peer-hover:-translate-y-10 lg:peer-hover:-translate-y-7 peer-hover:translate-y-6 peer-hover:opacity-100">
+                            <!-- Triangle pointer -->
+                            <div class="w-0 h-0 relative left-1 -top-1 lg:top-4 xl:top-6 rotate-45 lg:-rotate-45 border-t-4 border-t-transparent border-b-4 border-b-transparent border-r-8 border-r-teal-500"></div>
+                            <!-- Speech bubble -->
+                            <span class="text-[8px] lg:text-[10px] xl:text-sm bg-teal-500 lg:px-2 px-1 py-0 lg:py-1 rounded-lg whitespace-nowrap text-white">
+                                Kevin Rey Talisic
                             </span>
                         </span>
                     </div>
                 </div>
             </div>
-            <div class="animate-popin text-white">
+            <div class="animate-popin order-[1] lg:order-[2] text-white">
                 <video 
                     id="waving-video" 
-                    class="waving-video xl:w-80 w-60 h-60 lg:w-72 lg:h-72 xl:h-80" 
+                    class="waving-video xl:w-60 w-32 h-32 md:w-36 md:h-36 lg:w-72 lg:h-72 xl:h-60" 
                     muted
                     playsinline
                     preload="auto"
@@ -82,25 +140,44 @@
                 </video>
             </div>
         </div>
+
+        <!-- About Me Section -->
         <div class="bg-white/75 px-20">
              <div class="flex items-center min-h-screen">
-                <div class="main-content-section">
-                    <div class="flex w-max hover:scale-110 hover:cursor-pointer ease-in-out duration-100">
-                    <h1 class="text-4xl text-teal-500 text-center animate-right">About&nbsp;</h1>
-                    <h1 class="text-4xl text-teal-800 text-center animate-right-b">Me</h1>
+                <div class="main-content-section w-full flex flex-row justify-between items-center">
+                    <div>
+                        <div class="flex w-max hover:scale-110 hover:cursor-pointer ease-in-out duration-100">
+                        <h1 class="text-4xl text-teal-500 text-center animate-right">About&nbsp;</h1>
+                        <h1 class="text-4xl text-teal-800 text-center animate-right-b">Me</h1>
+                        </div>
+                        <p class="w-[45vw] mt-5 animate-right-c text-xl text-justify">
+                            Hi, You can call me Kevs, a Web Developer with 1 year of experience building web systems. I specialize in Laravel, Vue.js, React, and front-end development, with a creative background in digital art and animation. I enjoy collaborating with teams to deliver efficient solutions while exploring creative projects.
+                        </p>
                     </div>
-                    <p class="w-[45vw] mt-5 animate-right-c text-xl text-justify">
-                        Hi, You can call me Kevs, a Web Developer with 1 year of experience building web systems. I specialize in Laravel, Vue.js, React, and front-end development, with a creative background in digital art and animation. I enjoy collaborating with teams to deliver efficient solutions while exploring creative projects.
-                    </p>
+                    <div class="h-72 w-72 animate-right-c rounded-full overflow-hidden bg-gray-800">
+                        <img src="img/aboutme1.jpg" alt="About me" class="aboutme" >
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center min-h-screen">
+                <div class="main-content-section w-full flex flex-col items-start">
+                    <div>
+                        <h1 class="text-4xl text-teal-500 text-center animate-right-b">What I use</h1>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="px-20">
-             <div class="flex items-center min-h-screen">
-                <div class="main-content-section">
-                    <div class="w-max hover:scale-110 hover:cursor-pointer ease-in-out duration-100">
-                    <h1 class="text-4xl text-teal-500 text-center animate-right">Projects&nbsp;</h1>
+             <div class="flex flex-col justify-evenly min-h-screen">
+                <div class="flex w-full justify-center main-content-section">
+                    <h1 class="text-4xl text-teal-500 text-center animate-right-b">Projects</h1>
+                </div>
+                <div class="main-content-section flex w-full items-center justify-between">
+                    <div>
+                        <h1 class="text-4xl text-white text-center animate-right-b">Dental Clinic System</h1>
+                        <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-white text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out border-l-2 xl:border-l-4 rounded-md border-teal-500 text-teal-800">Try Demo</button>
                     </div>
+                    <img src="img/landing.png" class="h-60" >
                 </div>
             </div>
         </div>
