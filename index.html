@@ -15,6 +15,19 @@
     <div id="background-container"></div>
     
     <main class="relative z-10">
+        <!-- <header class="fixed top-0 w-full h-20 backdrop-blur-lg bg-gray-100/60 z-10 shadow-lg">
+            <div class="inline-flex px-5 items-center h-full justify-between items-center w-full">
+                <div>
+                    <img src="img/logo.png" class="h-16">
+                </div>
+                <div class="inline-flex text-white text-xl px-5 gap-6">
+                    <a href="#home">Home</a>
+                    <button>About</button>
+                    <button>Experience</button>
+                    <button>Work</button>
+                </div>
+            </div>
+        </header> -->
         <!-- Home section -->
         <div class="flex flex-col lg:flex-row mx-20 justify-center lg:justify-between items-center min-h-screen main-content-section">
             <div class="text-white order-[2] lg:order-[1] items-center lg:items-start flex flex-col">
@@ -41,13 +54,13 @@
                         <button class="p-1 xl:p-2 bg-teal-500 text-[6px] lg:text-xs xl:text-base w-max h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out hover:bg-white hover:text-teal-500 border-l-2 xl:border-l-4 rounded-md border-teal-800 text-white">Download CV</button>
                     </div>
                     <div>
-                        <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-gray-600 text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out hover:bg-white hover:text-gray-500 border-l-2 xl:border-l-4 rounded-md border-gray-400 text-white">Download Resume</button>
+                        <button class="p-1 xl:p-2 bg-gray-600 text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out hover:bg-white hover:text-gray-500 border-l-2 xl:border-l-4 rounded-md border-gray-400 text-white">Download Resume</button>
                     </div>
                 </div>
                 <div class="flex flex-row w-full justify-center lg:justify-start order-[1] lg:order-[5] gap-1 mt-4 mb-4 lg:mb-0 lg:mt-8 xl:mt-12 flex-row">
                     <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
                         <a href="https://x.com/PhKito" target="_blank" class="w-max peer">
-                        <img src="img/x-logo.png"  
+                        <img src="img/home/x-logo.png"  
                             class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
                         <span class="relative w-0 flex transition-all duration-300 ease-out
@@ -63,7 +76,7 @@
                     </div>
                     <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
                         <a href="mailto:kevstalisic@gmail.com?subject=Hiring Inquiry&body=Good day! Kevs, I would like to hire you" class="w-max peer">
-                        <img src="img/gmail.png"  
+                        <img src="img/home/gmail.png"  
                             class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
                         <span class="relative w-0 flex transition-all duration-300 ease-out
@@ -79,7 +92,7 @@
                     </div>
                     <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
                         <a href="https://github.com/NamelessKevs" target="_blank" class="w-max peer">
-                        <img src="img/github.png"  
+                        <img src="img/home/github.png"  
                             class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
                         <span class="relative w-0 flex transition-all duration-300 ease-out
@@ -95,7 +108,7 @@
                     </div>
                     <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
                         <a href="https://www.facebook.com/kevs.talisic" target="_blank" class="w-max peer">
-                        <img src="img/fb.png"  
+                        <img src="img/home/fb.png"  
                             class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
                         <span class="relative w-0 flex transition-all duration-300 ease-out
@@ -111,7 +124,7 @@
                     </div>
                     <div class="inline-flex w-max h-6 lg:h-8 xl:h-10 items-center">
                         <a href="https://www.linkedin.com/in/kevstalisic/" target="_blank" class="w-max peer">
-                        <img src="img/linkedin.png"  
+                        <img src="img/home/linkedin.png"  
                             class="p-0.5 lg:p-1 animate-left-b rounded-full bg-teal-600 hover:bg-teal-400 xl:w-8 xl:h-8 lg:w-6 lg:h-6 w-4 h-4">
                         </a>
                         <span class="relative w-0 flex transition-all duration-300 ease-out
@@ -135,8 +148,8 @@
                     playsinline
                     preload="auto"
                 >
-                    <source src="img/waving.mp4" type="video/mp4">
-                    <img src="img/loading-scream.png" alt="Kevin Rey Talisic" class="waving-video">
+                    <source src="img/home/waving.mp4" type="video/mp4">
+                    <img src="img/loading-screen/loading-scream.png" alt="Kevin Rey Talisic" class="waving-video">
                 </video>
             </div>
         </div>
@@ -151,33 +164,209 @@
                         <h1 class="text-4xl text-teal-800 text-center animate-right-b">Me</h1>
                         </div>
                         <p class="w-[45vw] mt-5 animate-right-c text-xl text-justify">
-                            Hi, You can call me Kevs, a Web Developer with 1 year of experience building web systems. I specialize in Laravel, Vue.js, React, and front-end development, with a creative background in digital art and animation. I enjoy collaborating with teams to deliver efficient solutions while exploring creative projects.
+                            Hi, You can call me Kevs, a Web Developer with 1 year of experience building web systems. I specialize in Laravel, Vue.js, React, and front-end development, with a creative background in digital art and animation. I enjoy collaborating with teams and create comprehensive user manuals and documentation to deliver efficient solutions while exploring creative projects.
                         </p>
                     </div>
                     <div class="h-72 w-72 animate-right-c rounded-full overflow-hidden bg-gray-800">
-                        <img src="img/aboutme1.jpg" alt="About me" class="aboutme" >
+                        <img src="img/aboutme/aboutme1.jpg" alt="About me" class="aboutme active:animate-spin" >
                     </div>
                 </div>
             </div>
-            <div class="flex items-center min-h-screen">
-                <div class="main-content-section w-full flex flex-col items-start">
+            <!-- <div class="flex items-center overflow-hidden min-h-screen">
+                <div class="main-content-section w-full flex flex-col items-end">
                     <div>
-                        <h1 class="text-4xl text-teal-500 text-center animate-right-b">What I use</h1>
+                        <h1 class="text-4xl text-teal-500 animate-left">What I use</h1>
                     </div>
                 </div>
+            </div> -->
+            <div class="flex py-10 overflow-hidden min-h-screen">
+                <div class="main-content-section flex flex-col gap-5 w-full">
+                    <h1 class="text-4xl text-right text-teal-500 animate-left mb-8">What I use</h1>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="grid animate-left-b grid-cols-5 gap-5">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/php.png" alt="PHP" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/javascript.png" alt="JavaScript" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/html.png" alt="HTML" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/css.png" alt="CSS" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/laravel.png" alt="Laravel" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/livewire.png" alt="Livewire" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/inertia.png" alt="Inertia.js" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/vue.png" alt="Vue.js" class="skill-icon mx-auto">
+                            </div>
+                            
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/react.png" alt="React" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/tailwind.png" alt="Tailwind CSS" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Web Development Stack</h3>
+                            <p class="text-gray-800 ">
+                                PHP, JavaScript, HTML, CSS, Laravel, Livewire, Inertia.js, Vue.js, React, Tailwind CSS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/vscode.png" alt="VS Code" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Code Editor</h3>
+                            <p class="text-gray-800 ">
+                                Visual Studio Code
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/laragon.png" alt="Laragon" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Development Environment</h3>
+                            <p class="text-gray-800 ">
+                                Laragon
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/ssms.png" alt="SSMS" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/heidisql.png" alt="HeidiSQL" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Database Management</h3>
+                            <p class="text-gray-800 ">
+                                SQL Server Management Studio (SSMS), HeidiSQL
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/sketchbook.png" alt="Sketchbook" class="skill-icon mx-auto">
+                            </div>
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/photoshop.png" alt="Photoshop" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Digital Art & Animation</h3>
+                            <p class="text-gray-800 ">
+                                Autodesk Sketchbook, Adobe Photoshop
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/figma.png" alt="Figma" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Graphic & UI/UX Design</h3>
+                            <p class="text-gray-800 ">
+                                Figma
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row main-content-section items-center justify-between">
+                        <!-- Images -->
+                        <div class="flex flex-row animate-left-b gap-2">
+                            <div class="skill-item bg-white p-4 rounded-lg shadow-md hover:shadow-lg">
+                                <img src="img/aboutme/drawio.png" alt="DrawIO" class="skill-icon mx-auto">
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="text-right animate-left-b">
+                            <h3 class="text-xl font-semibold text-teal-800 mb-3">Process Flow & ERD</h3>
+                            <p class="text-gray-800 ">
+                                Draw.io
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-5 main-content-section">
+                <h2 class="text-4xl w-full animate-down text-center text-teal-700 px-5 font-bold">Experience</h2>
+                <section class="relative pl-0.5 animate-down min-h-screen">
+                    <!-- Static border line -->
+                    <div class="absolute left-0 top-0 w-0.5 h-full bg-gray-300"></div>
+                    
+                    <!-- Moving indicator dot -->
+                    <div class="sticky top-1/2 w-1 h-[20vh] rgb-bg rounded-full transform -translate-x-3/4 translate-y-1 z-10"></div>
+                    
+                    <!-- Your experience content -->
+                </section>
             </div>
         </div>
-        <div class="px-20">
-             <div class="flex flex-col justify-evenly min-h-screen">
+        <div id="home" class="px-20">
+             <div class="flex flex-col justify-evenly min-h-screen h-auto gap-10 py-10">
                 <div class="flex w-full justify-center main-content-section">
-                    <h1 class="text-4xl text-teal-500 text-center animate-right-b">Projects</h1>
+                    <h1 class="text-4xl text-teal-500 text-center animate-up">Projects</h1>
                 </div>
                 <div class="main-content-section flex w-full items-center justify-between">
                     <div>
-                        <h1 class="text-4xl text-white text-center animate-right-b">Dental Clinic System</h1>
+                        <h1 class="text-4xl text-white text-center animate-up">Dental Clinic System</h1>
                         <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-white text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out border-l-2 xl:border-l-4 rounded-md border-teal-500 text-teal-800">Try Demo</button>
                     </div>
-                    <img src="img/landing.png" class="h-60" >
+                    <div class="animate-up active:w-20 hover:cursor-pointer">
+                        <img src="img/work/landing.png" class="h-60" >
+                    </div>
+                </div>
+                <div class="main-content-section flex w-full items-center justify-between">
+                    <div>
+                        <h1 class="text-4xl text-white text-center animate-up">Dental Clinic System</h1>
+                        <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-white text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out border-l-2 xl:border-l-4 rounded-md border-teal-500 text-teal-800">Try Demo</button>
+                    </div>
+                    <div class="animate-up active:w-20 hover:cursor-pointer">
+                        <img src="img/work/landing.png" class="h-60" >
+                    </div>
+                </div>
+                                <div class="main-content-section flex w-full items-center justify-between">
+                    <div>
+                        <h1 class="text-4xl text-white text-center animate-up">Dental Clinic System</h1>
+                        <button onclick="window.open('demo1.html', '_blank')" class="p-1 xl:p-2 bg-white text-[6px] lg:text-xs xl:text-base h-max border-b xl:border-b-2 active:border-b-0 active:border-l-0 transition-all duration-200 ease-out border-l-2 xl:border-l-4 rounded-md border-teal-500 text-teal-800">Try Demo</button>
+                    </div>
+                    <div class="animate-up active:w-20 hover:cursor-pointer">
+                        <img src="img/work/landing.png" class="h-60" >
+                    </div>
                 </div>
             </div>
         </div>

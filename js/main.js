@@ -1,13 +1,13 @@
 // Loading Screen Configuration
 const loadingPairs = [
-    { text: "Preparing something awesome...", image: "img/loading-scream.png" },
-    { text: "Hang tight! It's almost ready...", image: "img/loading-scream.png" },
-    { text: "Building the magic for you...", image: "img/galaxy.png" },
-    { text: "Just a moment, getting things ready...", image: "img/animate.gif" },
-    { text: "Almost there, hold on tight!", image: "img/loading-scream.png" },
-    { text: "Planning, Designing, Coding, DEVELOPING!", image: "img/loading-scream.png" },
-    { text: "reCycling the code, Hang on", image: "img/loading-scream.png" },
-    { text: "Generating Design and Function to run...", image: "img/loading-scream.png" }
+    { text: "Preparing something awesome...", image: "img/loading-screen/loading-scream.png" },
+    { text: "Hang tight! It's almost ready...", image: "img/loading-screen/loading-scream.png" },
+    { text: "Building the magic for you...", image: "img/loading-screen/galaxy.png" },
+    { text: "Just a moment, getting things ready...", image: "img/loading-screen/animate.gif" },
+    { text: "Almost there, hold on tight!", image: "img/loading-screen/loading-scream.png" },
+    { text: "Planning, Designing, Coding, DEVELOPING!", image: "img/loading-screen/loading-scream.png" },
+    { text: "reCycling the code, Hang on", image: "img/loading-screen/loading-scream.png" },
+    { text: "Generating Design and Function to run...", image: "img/loading-screen/loading-scream.png" }
 ];
 
 // Load loading component

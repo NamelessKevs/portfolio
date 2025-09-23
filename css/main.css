@@ -40,13 +40,43 @@ html {
 .animate-left {
     opacity: 0;
     transform: translateX(200px); /* Start slightly below */
-    transition: opacity 0.1s ease, transform 0.4s ease; /* Add transition */
+    transition: opacity 0.4s ease, transform 0.7s ease; /* Add transition */
 }
 
 .animate-left-b {
     opacity: 0;
     transform: translateX(200px);
     transition: opacity 0.9s ease 1s, transform 1.2s ease 1s;
+}
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+.skill-category {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.skill-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .animate-right {
@@ -105,14 +135,14 @@ html {
   animation: gradientAnimation 2s ease infinite;
 }
 
-.rgb-bg:hover {
-  background: linear-gradient(270deg, #4bc560, #c9c758, #bc56ad, #3287af);
+.rgb-bg {
+  background: linear-gradient(270deg, #069448, #c13737,  rgb(249, 116, 27), rgb(255, 172, 47), #f4b73d, #1b85b2, #a20492, #3c3cc7, #BAA091, #8A5);
   background-size: 1200% 1200%;
-  animation: gradientAnimation 4s ease infinite;
+  animation: gradientAnimation 5s ease infinite;
 }
 
 .rgb-bg2:hover {
-  background: linear-gradient(270deg, #069448, #c13737, #f4b73d, #1b85b2);
+  background: linear-gradient(270deg, #4bc560, #c9c758, #bc56ad, #3287af);
   background-size: 1200% 1200%;
   animation: gradientAnimation 5s ease infinite;
 }
