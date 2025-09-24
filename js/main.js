@@ -10,6 +10,72 @@ const loadingPairs = [
     { text: "Generating Design and Function to run...", image: "img/loading-screen/loading-scream.png" }
 ];
 
+// Auto Image Slideshow Configuration - ADD NEW IMAGES HERE
+const aboutMeImages = [
+    'img/aboutme/aboutme1.jpg',
+    'img/aboutme/aboutme2.jpg'
+];
+
+// Auto Image Slideshow functionality
+function initializeAutoImageSlideshow() {
+    const containers = document.querySelectorAll('.auto-slideshow');
+    
+    containers.forEach(container => {
+        let currentImageIndex = 0;
+        let slideInterval = null; // Store the interval ID
+        const changeInterval = 5000; // 5 seconds
+
+        // Create image elements
+        function createImageElements() {
+            container.innerHTML = '';
+            
+            aboutMeImages.forEach((imagePath, index) => {
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.alt = `About me ${index + 1}`;
+                img.className = `aboutme absolute inset-0 w-full h-full object-cover`;
+                img.style.opacity = index === 0 ? '1' : '0';
+                img.style.transition = 'opacity 2s ease-in-out';
+                
+                container.appendChild(img);
+            });
+        }
+
+        // Simple fade function
+        function changeImage() {
+            if (container.children.length === 0) return;
+            
+            const currentImg = container.children[currentImageIndex];
+            const nextIndex = (currentImageIndex + 1) % aboutMeImages.length;
+            const nextImg = container.children[nextIndex];
+
+            // Simple opacity change
+            currentImg.style.opacity = '0';
+            nextImg.style.opacity = '1';
+            
+            currentImageIndex = nextIndex;
+        }
+
+        // Function to start the slideshow interval
+        function startSlideshow() {
+            if (aboutMeImages.length > 1 && !slideInterval) {
+                slideInterval = setInterval(changeImage, changeInterval);
+            }
+        }
+
+        // Add data attribute to mark this container for slideshow start
+        container.setAttribute('data-slideshow-ready', 'true');
+        
+        // Store the start function on the container for the intersection observer
+        container.startSlideshow = startSlideshow;
+
+        // Initialize images but don't start interval yet
+        if (aboutMeImages.length > 0) {
+            createImageElements();
+        }
+    });
+}
+
 // Load loading component
 function loadLoadingComponent() {
     fetch('components/loading.html')
@@ -57,6 +123,8 @@ function initializeLoadingScreen() {
                 // Re-enable scrolling after loading is complete
                 document.body.style.overflow = 'auto';
                 setupIntersectionObserver();
+                // Initialize slideshow after loading is complete
+                initializeAutoImageSlideshow();
             }, 1000);
         }, 100);
     }
@@ -105,6 +173,15 @@ function setupIntersectionObserver() {
                         console.log('Video autoplay failed:', error);
                     });
                 }
+                
+                // Check if this section contains slideshow containers and start them
+                const slideshowContainers = entry.target.querySelectorAll('.auto-slideshow[data-slideshow-ready="true"]');
+                slideshowContainers.forEach(container => {
+                    if (container.startSlideshow) {
+                        container.startSlideshow();
+                        container.removeAttribute('data-slideshow-ready'); // Prevent multiple starts
+                    }
+                });
                 
                 observer.unobserve(entry.target);
             }
